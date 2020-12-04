@@ -16,10 +16,10 @@ public class OrderContent {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@OneToOne(cascade = {CascadeType.ALL})
+	@ManyToOne(cascade = {CascadeType.ALL})
 	private Item item;
 	
-	@OneToOne(cascade = {CascadeType.ALL})
+	@ManyToOne(cascade = {CascadeType.ALL})
 	private Supplier supplier;
 	
 

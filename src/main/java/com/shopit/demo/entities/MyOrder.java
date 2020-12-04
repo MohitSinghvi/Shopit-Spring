@@ -19,8 +19,8 @@ public class MyOrder {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@OneToOne
-	Customer customer;
+	@ManyToOne
+	private Customer customer;
 	
 	@OneToMany(mappedBy ="order",fetch=FetchType.LAZY,cascade = CascadeType.ALL)
 	private Set<OrderContent> orderContents;
